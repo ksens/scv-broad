@@ -1,3 +1,4 @@
+
 // Style for the tokens
 (function () {
   var s = `
@@ -1610,7 +1611,7 @@
 }));
 
 // Web service calls
-var url = "/cgi-bin/scpServices.pl";
+var url = "https://canvasxpress.org/cgi-bin/scpServices.pl";
 var user = $('#CanvasXpress-SCP').data('user');
 var updateOptions = function (opts) {
   $('#annotation-SCP').empty();
@@ -1794,7 +1795,7 @@ var showStatus = function(s) {
 $('#tokenfield-study').tokenfield({
   autocomplete: {
     source: function (request, response) {
-      jQuery.get("/cgi-bin/scpServices.pl", {
+      jQuery.get("https://canvasxpress.org/cgi-bin/scpServices.pl", {
         study: request.term,
         user: user
       }, function (data) {
@@ -1838,7 +1839,7 @@ $('#tokenfield-study').on('tokenfield:createdtoken', function (e) {
 $('#tokenfield-gene').tokenfield({
   autocomplete: {
     source: function (request, response) {
-      jQuery.get("/cgi-bin/gtexServices.pl", {
+      jQuery.get("https://canvasxpress.org/cgi-bin/gtexServices.pl", {
         token: request.term,
         user: user
       }, function (data) {
